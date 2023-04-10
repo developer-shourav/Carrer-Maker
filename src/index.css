@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.btn-primary{
+    @apply btn bg-gradient-to-r from-indigo-400 to-purple-500   border-0 normal-case rounded-md
+  }
+
+body{
+  font-family: 'Manrope', sans-serif;
+}
+
+
+.container{
+    max-width: 1150px;
+    margin: 0 auto;
+}
