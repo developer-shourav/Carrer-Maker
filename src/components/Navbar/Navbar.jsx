@@ -1,8 +1,9 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <div className="container pt-5">
+    <div className="container lg:pt-5">
       <div className="navbar bg-base-100 ">
         <div className="navbar-start">
           <div className="dropdown">
@@ -27,16 +28,16 @@ const Navbar = () => {
               className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
             >
               <li>
-                <a>Home</a>
+                <NavLink to='/home'>Home</NavLink>
               </li>
               <li>
-                <a>Statistics</a>
+                <NavLink to='/statistics'>Statistics</NavLink>
               </li>
               <li>
-                <a>Applied Jobs</a>
+                <NavLink to='/applied'>Applied Jobs</NavLink>
               </li>
               <li>
-                <a>Blog</a>
+                <NavLink to='/blog'>Blog</NavLink>
               </li>
              
             </ul>
@@ -46,16 +47,16 @@ const Navbar = () => {
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
             <li>
-              <a>Home</a>
+              <NavLink className={({isActive}) => isActive ? 'text-purple-500 bg-transparent' : ''} to='/'>Home</NavLink>
             </li>
             <li>
-              <a>Statistics</a>
+              <NavLink className={({isActive}) => isActive ? 'text-purple-500 bg-transparent' : ''} to='/statistics'>Statistics</NavLink>
             </li>
             <li>
-              <a>Applied Jobs</a>
+              <NavLink className={({isActive}) => isActive ? 'text-purple-500 bg-transparent' : ''} to='/applied'>Applied Jobs</NavLink>
             </li>
             <li>
-              <a>Blog</a>
+              <NavLink className={({isActive}) => isActive ? 'text-purple-500 bg-transparent' : ''} to='/blog'>Blog</NavLink>
             </li>
           </ul>
         </div>
