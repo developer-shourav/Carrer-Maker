@@ -1,22 +1,22 @@
 [
     {
-      "question": "What is the difference between 'props' and 'state' ?",
-      "ans": "Props and State is totally different, props is like an argument of a function. When we create a component and want to render data, In this case, we use props for passing data from the source. Props comes from outside of a component. On the other hand, the State occurs inside a component. State means it can be changed.  State changed by any kind of outer events or the events that occurs by the user or client side. State has an initial value and it changes due to evens."
+      "question": "When should you use context API ?",
+      "ans": "Context API is a feature in React that allows  to pass data through the component tree without the need to pass props manually at every level. We can use Context API in React when we have data that needs to be shared between multiple components in your application. It's very helpful . It prevents passing a props in many stage for use. Give advantage for more easy and efficient data passing through the component."
     },
   
     {
-      "question": "How 'useState' works?",
-      "ans": "useState is a very popular and useful react hook. useState returns an Array. The first element of the array is the initial value of useState hook's and the second array element is a function that changes the value of the first element of array  by event. The event could be form user or clint side ."
+      "question": "What is React Custom Hooks",
+      "ans": "React Custom Hooks are a feature in React that allow us to extract reusable logic from our components into a  function. Custom Hooks give opportunities to reuse logic between components, without duplicating code ."
     },
   
     {
-      "question": "what is done by 'useEffect' besides data fetching?",
-      "ans": "useEffect is a very useful react hook too. useEffect handle the after effects. It is commonly use for data fetching outside. But it also rendering data and call any function based on its dependency. UseEffect hook contains with an anonymous function and a dependency. If there is no dependency it's initial dependency is an empty array."
+      "question": "What is useRef? Why should we use it?",
+      "ans": "useRef is a Hook in React that returns a mutable ref object, which can be used to store a reference to a DOM element or any other value that needs to persist between renders. It is a useful Hook in React that provides a way to store and manipulate mutable values across renders, and is especially useful for working with DOM elements."
     },
   
     {
-      "question": "How does React work?",
-      "ans": "React is most popular javascript libray for creating user interface or client side app. React App gives a preset for production level web site or web application. It provides developer friendly environment for frontend developer. React is a component based libray fo Javascript. React jsx makes it more easier to learn and work with. It comes with so many awesome Hooks to make developers live easyer. React use 'diff alghorithom' to detect the simple change of the page. It's crate a 'vartual dom' , that makes it so fast to rendering data."
+      "question": "What is useMemo ? How does it works?",
+      "ans": "useMemo is a Hook in React that memoizes the result of a function so that it is only recomputed when one of its dependencies changes. The main purpose of useMemo is to optimize the performance of expensive computations in a React component by avoiding unnecessary re-renders."
     }
   ]
   
