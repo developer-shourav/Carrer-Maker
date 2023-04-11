@@ -17,27 +17,27 @@ const router = createBrowserRouter([
     children: [
       {
        path:'/',
-       element:<div className='w-11/12 mx-auto md:w-full'><Home> </Home></div>,
+       element:<Home> </Home>,
 
       },
       {
        path:'home',
-       element:<div className='w-11/12 mx-auto md:w-full'><Home> </Home></div>,
+       element:<Home> </Home>,
 
       },
       {
        path:'statistics',
-       element:<div className='w-11/12 mx-auto md:w-full'><Statistics> </Statistics></div>,
+       element:<Statistics> </Statistics>,
 
       },
       {
        path:'applied',
-       element:<div className='w-11/12 mx-auto md:w-full'><AppliedJobs> </AppliedJobs></div>,
+       element:<AppliedJobs> </AppliedJobs>,
 
       },
       {
        path:'blog',
-       element:<div className='w-11/12 mx-auto md:w-full'><Blog> </Blog></div>,
+       element:<Blog> </Blog>,
 
       },
     ]
