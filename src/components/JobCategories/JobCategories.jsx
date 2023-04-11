@@ -17,7 +17,7 @@ const JobCategories = () => {
           need. Its your future
         </p>
 
-        <div className=" ps-10 mx-auto my-20 grid grid-cols-2  lg:grid-cols-4">
+        <div className=" lg:ps-10 mx-auto my-20 grid  grid-cols-2  lg:grid-cols-4">
           {
             categories?.map( category => <Category key={category?.id} items ={category}> </Category>)
           }

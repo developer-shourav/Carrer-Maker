@@ -9,6 +9,10 @@ const Home = () => {
 
       {/*-------- Job Category area ----- */}
       <JobCategories> </JobCategories>
+
+      <div>
+        <h1>Featured Jobs</h1>
+      </div>
     </div>
   );
 };
