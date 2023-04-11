@@ -37,7 +37,7 @@ const Navbar = () => {
                 <NavLink to='/applied'>Applied Jobs</NavLink>
               </li>
               <li>
-                <NavLink to='/blog'>Blog</NavLink>
+                <NavLink to='/blogs'>Blog</NavLink>
               </li>
              
             </ul>
@@ -56,7 +56,7 @@ const Navbar = () => {
               <NavLink className={({isActive}) => isActive ? 'text-purple-500 bg-transparent' : ''} to='/applied'>Applied Jobs</NavLink>
             </li>
             <li>
-              <NavLink className={({isActive}) => isActive ? 'text-purple-500 bg-transparent' : ''} to='/blog'>Blog</NavLink>
+              <NavLink className={({isActive}) => isActive ? 'text-purple-500 bg-transparent' : ''} to='/blogs'>Blog</NavLink>
             </li>
           </ul>
         </div>
