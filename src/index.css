@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+html{
+  scroll-behavior: smooth;
+}
 .btn-primary{
     @apply btn bg-gradient-to-r from-indigo-400 to-purple-500   border-0 normal-case rounded-md
   }

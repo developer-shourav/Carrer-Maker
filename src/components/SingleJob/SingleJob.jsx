@@ -2,7 +2,6 @@ import React from "react";
 import LocationIcon from "../../assets/icons/job/location.png";
 import MoneyIcon from "../../assets/icons/job/money.png";
 const SingleJob = ({jobInfo}) => {
-    console.log(jobInfo);
     const {companyLogo, jobTitle, companyName, jobType, jobDuration, location, salary} = jobInfo;
   return (
       <div className="border p-6 rounded-lg">
