@@ -1,6 +1,7 @@
 import React from "react";
 import HeroArea from "../HeroArea/HeroArea";
 import JobCategories from "../JobCategories/JobCategories";
+import AllJobs from "../AllJobs/AllJobs";
 const Home = () => {
   return (
     <div className="container  pt-5">
@@ -10,9 +11,8 @@ const Home = () => {
       {/*-------- Job Category area ----- */}
       <JobCategories> </JobCategories>
 
-      <div>
-        <h1>Featured Jobs</h1>
-      </div>
+      {/*-------- All Jobs Section  ----- */}
+      <AllJobs> </AllJobs>
     </div>
   );
 };
