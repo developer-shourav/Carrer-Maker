@@ -1,12 +1,13 @@
 import React from "react";
 import LocationIcon from "../../assets/icons/job/location.png";
 import MoneyIcon from "../../assets/icons/job/money.png";
+import { Link } from "react-router-dom";
 const SingleJob = ({jobInfo}) => {
-    const {companyLogo, jobTitle, companyName, jobType, jobDuration, location, salary} = jobInfo;
+    const {id,companyLogo, jobTitle, companyName, jobType, jobDuration, location, salary} = jobInfo;
   return (
       <div className="border p-6 rounded-lg">
         <img
-          className="mb-5 w-40"
+          className="mb-5 w-40 md:h-12"
           src={companyLogo}
          
           alt=""
@@ -28,7 +29,7 @@ const SingleJob = ({jobInfo}) => {
             <img className="inline" src={MoneyIcon} alt="" /> Salary : {salary}
           </span>
         </div>
-        <button className="btn-primary mb-3">View Details</button>
+        <Link to={`/jobDetails/${id}`} ><button className="btn-primary mb-3">View Details</button></Link>
       </div>
   );
 };

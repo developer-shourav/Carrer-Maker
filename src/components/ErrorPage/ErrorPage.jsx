@@ -7,7 +7,6 @@ import ErrorImg from '../../assets/errorImg/404.gif';
 const ErrorPage = () => {
 
     const error = useRouteError();
-    console.error(error);
     return (
         <div className='container text-center'>
          <img className='text-center inline-block w-40 md:w-auto my-5' src={ErrorImg} alt="" />

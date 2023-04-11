@@ -61,7 +61,7 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="navbar-end">
-          <a className="btn-primary">Star Applying</a>
+          <a href="#jobs" className="btn-primary">Star Applying</a>
         </div>
       </div>
     </div>

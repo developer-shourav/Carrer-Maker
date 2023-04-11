@@ -17,7 +17,7 @@ const HeroArea = () => {
             from start to finish.
           </p>
 
-          <button className="btn-primary ">Get Started</button>
+          <button className="btn-primary "><a href="#jobs">Get Started</a></button>
         </div>
 
         {/* Hero image section */}

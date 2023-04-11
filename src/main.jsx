@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import ReactDOM from 'react-dom/client'
 import './index.css'
 import MainLayout from './Layouts/MainLayout'
@@ -8,6 +8,7 @@ import Home from './components/Home/Home'
 import Statistics from './components/Statistics/Statistics'
 import AppliedJobs from './components/AppliedJobs/AppliedJobs'
 import Blog from './components/Blog/Blog'
+import JobDetails from './components/JobDetails/JobDetails'
 
 const router = createBrowserRouter([
    {
@@ -25,6 +26,14 @@ const router = createBrowserRouter([
        element:<Home> </Home>,
 
       },
+
+      {
+       path:'jobDetails/:jobId',
+       element:<JobDetails> </JobDetails>,
+       loader: ({params}) => params.jobId,
+
+      },
+
       {
        path:'statistics',
        element:<Statistics> </Statistics>,

@@ -16,7 +16,7 @@ const AllJobs = () => {
 
   return (
     <div className="">
-      <h1 className="text-4xl font-bold text-center">Featured Jobs</h1>
+      <h1 id="jobs" className="text-4xl font-bold text-center">Featured Jobs</h1>
       <p className="text-center text-gray-500 mx-auto my-5 lg:w-8/12">
         Top jobs for you that can change your life. Grew up you career here.
       </p>
