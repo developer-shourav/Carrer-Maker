@@ -6,7 +6,7 @@ html{
   scroll-behavior: smooth;
 }
 .btn-primary{
-    @apply btn bg-gradient-to-r from-indigo-400 to-purple-500   border-0 normal-case rounded-md
+    @apply btn bg-gradient-to-r from-indigo-400 to-purple-500   border-0 normal-case rounded-md  font-semibold tracking-wider
   }
 
 body{
