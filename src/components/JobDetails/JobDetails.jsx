@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useLoaderData } from 'react-router-dom';
+import { json, useLoaderData } from 'react-router-dom';
 import MoneyIcon from '../../assets/icons/detials/money.png';
 import JobIcon from '../../assets/icons/detials/date.png';
 import PhoneIcon from '../../assets/icons/detials/phone.png';
@@ -19,7 +19,29 @@ const JobDetails = () => {
         })
      } , [])
 
-     const {jobDescription,jobRes, jobTitle,  phone, email, location, salary, experiences, education} = jobData;
+     const {id, jobDescription, companyLogo, jobDuration, jobType, jobRes, jobTitle, companyName,   phone, email, location, salary, experiences, education} = jobData;
+
+     const addToStorage = () => {
+      const appliedJobs = [];
+
+      const appliedJobsInStorage = JSON.parse(localStorage.getItem('applied-jobs'));
+
+      if(appliedJobsInStorage){
+
+        const newAppliedJob =  {id,jobTitle,  companyName, companyLogo, jobDuration, jobType, salary, location };
+        const newTotalApplied = [...appliedJobsInStorage, newAppliedJob];
+        localStorage.setItem('applied-jobs', JSON.stringify(newTotalApplied))
+
+      }
+
+      else{
+        const newAppliedJob =  {id,jobTitle,  companyName, companyLogo, jobDuration, jobType , salary, location };
+        appliedJobs.push(newAppliedJob)
+        localStorage.setItem('applied-jobs', JSON.stringify(appliedJobs))
+      }
+
+      
+     }
      
     return (
         <div className='container'>
@@ -67,7 +89,7 @@ const JobDetails = () => {
                         <p className='text-gray-600 mb-3'> <img src={LocationIcon} className='inline-block me-1' alt="" /> <span className='font-bold '>Address:</span> {location}</p>
 
                     </div>
-                    <button className='btn-primary w-full'>Apply Now</button>
+                    <button onClick={ () => addToStorage()} className='btn-primary w-full'>Apply Now</button>
                 </div>
 
             </div>

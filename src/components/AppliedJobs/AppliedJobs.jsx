@@ -1,7 +1,9 @@
 import React from "react";
-
 import AppliedSingleJob from "../AppliedSingleJob/AppliedSingleJob";
+import { useLoaderData } from "react-router-dom";
 const AppliedJobs = () => {
+
+    const jobsApplied = useLoaderData();
   return (
     <div className="container">
       <div className="py-10 mb-20 lg:py-20 bg-indigo-50 rounded-md">
@@ -10,7 +12,9 @@ const AppliedJobs = () => {
 
       <div className="my-20">
 
-       <AppliedSingleJob> </AppliedSingleJob>
+       {
+        jobsApplied?.map( job => <AppliedSingleJob key={job.index} jobInfo = {job}> </AppliedSingleJob>)
+       }
 
         
       </div>
