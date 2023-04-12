@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 const AppliedSingleJob = ({jobInfo}) => {
   const {id, jobTitle, companyName, companyLogo, jobDuration, jobType, location, salary} = jobInfo
     return (
-        <div className="border my-5 flex flex-col md:flex-row justify-between md:items-center p-5 rounded-lg">
+        <div className="border clear-both my-5 flex flex-col md:flex-row justify-between md:items-center p-5 rounded-lg">
             
         <div className="flex flex-col md:flex-row  gap-6">
           <div className=" bg-indigo-50  p-10 rounded-md ">
