@@ -1,4 +1,5 @@
 import React from "react";
+import { useLoaderData } from "react-router-dom";
 import {
   Radar,
   RadarChart,
@@ -8,51 +9,9 @@ import {
   Tooltip,
 } from "recharts";
 const Statistics = () => {
-  const data = [
-    {
-      subject: "Assignment-1",
-      marksGot: 60,
-      fullMark: 60,
-    },
-    {
-      subject: "Assignment-2",
-      marksGot: 60,
-      fullMark: 60,
-    },
-    {
-      subject: "Assignment-3",
-      marksGot: 59,
-      fullMark: 60,
-    },
-    {
-      subject: "Assignment-4",
-      marksGot: 60,
-      fullMark: 60,
-    },
-    {
-      subject: "Assignment-5",
-      marksGot: 53,
-      fullMark: 60,
-    },
-    {
-      subject: "Assignment-6",
-      marksGot: 60,
-      fullMark: 60,
-    },
-    {
-      subject: "Assignment-7",
-      marksGot: 60,
-      fullMark: 60,
-    },
-    {
-      subject: "Assignment-8",
-      marksGot: 60,
-      fullMark: 60,
-    },
-  ];
-
+    const data = useLoaderData()
   return (
-    <div className="container text-center">
+    <div className="container text-center ">
       <RadarChart
         cx={300}
         cy={250}
@@ -60,6 +19,7 @@ const Statistics = () => {
         width={600}
         height={500}
         data={data}
+        
       >
         <PolarGrid />
         <PolarAngleAxis dataKey="subject" />
