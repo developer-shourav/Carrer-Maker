@@ -26,4 +26,3 @@ body{
 .btn-custom{
   @apply py-2 px-3 border border-indigo-600 rounded font-semibold text-indigo-500 text-sm
 }
-
