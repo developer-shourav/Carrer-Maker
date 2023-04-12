@@ -32,7 +32,7 @@ const AllJobs = () => {
       
       <div className="relative">
       {
-        showAll ?  <button onClick={ () => setShowAll(false)} className="btn-primary absolute w-full md:w-auto  left-0 md:left-1/2 top-5 md:top-10 "> See less Job</button> : <button onClick={ () => setShowAll(true)} className="btn-primary absolute w-full md:w-auto  left-0 md:left-1/2 top-5 md:top-10 "> See All Jobs</button>
+        showAll ?  <button onClick={ () => setShowAll(false)} className="btn-primary absolute w-full md:w-auto  left-0 md:left-1/2 top-5 md:top-10 "> See less</button> : <button onClick={ () => setShowAll(true)} className="btn-primary absolute w-full md:w-auto  left-0 md:left-1/2 top-5 md:top-10 "> See All Jobs</button>
       }
       </div>
       
