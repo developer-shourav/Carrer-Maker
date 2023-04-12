@@ -5,7 +5,7 @@ import JobIcon from '../../assets/icons/detials/date.png';
 import PhoneIcon from '../../assets/icons/detials/phone.png';
 import EmailIcon from '../../assets/icons/detials/email.png';
 import LocationIcon from '../../assets/icons/detials/location.png';
-
+import Swal from 'sweetalert2'
 const JobDetails = () => {
      const _id = useLoaderData();
      const [jobData, setJobData] = useState({});
@@ -21,16 +21,33 @@ const JobDetails = () => {
 
      const {id, jobDescription, companyLogo, jobDuration, jobType, jobRes, jobTitle, companyName,   phone, email, location, salary, experiences, education} = jobData;
 
-     const addToStorage = () => {
+     const addToStorage = (_id) => {
       const appliedJobs = [];
 
       const appliedJobsInStorage = JSON.parse(localStorage.getItem('applied-jobs'));
 
       if(appliedJobsInStorage){
 
-        const newAppliedJob =  {id,jobTitle,  companyName, companyLogo, jobDuration, jobType, salary, location };
-        const newTotalApplied = [...appliedJobsInStorage, newAppliedJob];
-        localStorage.setItem('applied-jobs', JSON.stringify(newTotalApplied))
+        const isApplied = appliedJobsInStorage.find( job => job?.id === _id)
+
+          if(isApplied){
+            Swal.fire({
+              icon: 'error',
+              title: 'Oops Sorry...',
+              text: "You can't apply this job! Because you already applied for this job once."
+            })
+          }
+
+          else{
+            const newAppliedJob =  {id,jobTitle,  companyName, companyLogo, jobDuration, jobType, salary, location };
+            const newTotalApplied = [...appliedJobsInStorage, newAppliedJob];
+            localStorage.setItem('applied-jobs', JSON.stringify(newTotalApplied))
+            Swal.fire(
+              'Apply Done!',
+              'Successfully you applied this job',
+              'success'
+            )
+          }
 
       }
 
@@ -38,6 +55,11 @@ const JobDetails = () => {
         const newAppliedJob =  {id,jobTitle,  companyName, companyLogo, jobDuration, jobType , salary, location };
         appliedJobs.push(newAppliedJob)
         localStorage.setItem('applied-jobs', JSON.stringify(appliedJobs))
+        Swal.fire(
+          'Applied Done!',
+          'Successfully you applied this job',
+          'success'
+        )
       }
 
       
@@ -89,7 +111,7 @@ const JobDetails = () => {
                         <p className='text-gray-600 mb-3'> <img src={LocationIcon} className='inline-block me-1' alt="" /> <span className='font-bold '>Address:</span> {location}</p>
 
                     </div>
-                    <button onClick={ () => addToStorage()} className='btn-primary w-full'>Apply Now</button>
+                    <button onClick={ () => addToStorage(id)} className='btn-primary w-full'>Apply Now</button>
                 </div>
 
             </div>
