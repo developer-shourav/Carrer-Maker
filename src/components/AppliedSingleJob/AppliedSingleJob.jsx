@@ -1,9 +1,10 @@
 import React from 'react';
 import LocationIcon from "../../assets/icons/job/location.png";
 import MoneyIcon from "../../assets/icons/job/money.png";
+import { Link } from 'react-router-dom';
 
 const AppliedSingleJob = ({jobInfo}) => {
-  const {jobTitle, companyName, companyLogo, jobDuration, jobType, location, salary} = jobInfo
+  const {id, jobTitle, companyName, companyLogo, jobDuration, jobType, location, salary} = jobInfo
     return (
         <div className="border my-5 flex flex-col md:flex-row justify-between md:items-center p-5 rounded-lg">
             
@@ -25,14 +26,14 @@ const AppliedSingleJob = ({jobInfo}) => {
             <span>
               {" "}
               <img className="inline" src={MoneyIcon} alt="" /> Salary :{" "}
-             70K - 90K
+             {salary}
             </span>
           </div>
         </div>
         </div>
 
         <div className="">
-          <button className="btn-primary">View Details</button>
+        <Link to={`/jobDetails/${id}`} ><button className="btn-primary mb-3">View Details</button></Link>
         </div>
       </div>
     );
